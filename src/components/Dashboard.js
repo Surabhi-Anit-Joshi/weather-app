@@ -9,7 +9,7 @@ const Dashboard = () => {
   const location = useLocation();
   const navigate = useNavigate();
   
-  // States
+
   const [weather, setWeather] = useState(null);
   const [forecast, setForecast] = useState([]);
   const [history, setHistory] = useState([]);
@@ -18,13 +18,13 @@ const Dashboard = () => {
 
   const API_KEY = '4f4b915f8097d3f62c8a3ff00ed9f0b1';
 
-  // 1. Load History from LocalStorage on mount
+  
   useEffect(() => {
     const savedHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
     setHistory(savedHistory);
   }, []);
 
-  // 2. Listen for navigation state (from SearchCity.js)
+  
   useEffect(() => {
     if (location.state && location.state.cityName) {
       getWeatherData(location.state.cityName);
@@ -35,7 +35,7 @@ const Dashboard = () => {
     setLoading(true);
     setError(null);
     try {
-      // Fetch Current Weather
+    
       const currRes = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
       );
@@ -71,9 +71,9 @@ const Dashboard = () => {
     icon: data.weather[0].icon
   };
   
-  // Use the functional update (prevHistory) to get the true current state
+  
   setHistory((prevHistory) => {
-    // 1. Remove the city if it already exists (prevent duplicates)
+    
     const filtered = prevHistory.filter(item => item.name !== data.name);
     
     // 2. Add the new entry to the top and limit to 6

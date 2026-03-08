@@ -1,4 +1,4 @@
-// src/components/SearchCity.js
+
 import React, { useState } from 'react';
 import { Box, Typography, TextField, Button, InputAdornment, Paper } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
@@ -21,17 +21,17 @@ const SearchCity = () => {
       flexDirection: 'column', 
       justifyContent: 'center', 
       alignItems: 'center',
-      // Dynamic sky-like gradient
+      
       background: 'linear-gradient(180deg, #1424d8 0%, #449ba7 100%)', 
       px: 2
     }}>
       
-      {/* Search Content Card */}
+      
       <Paper elevation={0} sx={{ 
         p: 5, 
         borderRadius: 8, 
-        bgcolor: 'rgba(255, 255, 255, 0.2)', // Semi-transparent
-        backdropFilter: 'blur(15px)', // Glassmorphism
+        bgcolor: 'rgba(255, 255, 255, 0.2)', 
+        backdropFilter: 'blur(15px)', 
         border: '1px solid rgba(255, 255, 255, 0.3)',
         textAlign: 'center',
         width: '100%',
@@ -83,17 +83,10 @@ const SearchCity = () => {
           }}
         />
 
-        {/* <Button 
-          fullWidth
-          variant="text"
-          sx={{ mt: 3, color: '#fff', textTransform: 'none', fontSize: '1rem', opacity: 0.9 }} 
-          onClick={() => navigate('/dashboard')}
-        >
-          ← Back to Dashboard
-        </Button> */}
+        
       </Paper>
 
-      {/* Subtle bottom text for a pro look */}
+      
       <Typography sx={{ mt: 4, color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem' }}>
         Powered by OpenWeather API
       </Typography>

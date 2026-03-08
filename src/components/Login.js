@@ -1,4 +1,4 @@
-// src/components/Login.js
+
 import React, { useState } from 'react';
 import { TextField, Button, Typography, Box, Link, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
@@ -13,11 +13,11 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Basic Validation - Ensuring no empty submissions
+    
     if (email.trim() !== '' && password.trim() !== '') {
       setError(false);
       
-      // Save login state to Local Storage for Protected Routes
+      
       localStorage.setItem('isAuthenticated', 'true');
       localStorage.setItem('userEmail', email);
       

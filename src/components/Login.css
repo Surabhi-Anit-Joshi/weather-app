@@ -1,17 +1,17 @@
-/* src/components/Login.css */
+
 .login-container {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Soft, blurred atmospheric background */
+    
     background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
     background-size: cover;
     position: relative;
 }
 
-/* Creating the blur effect seen in the image */
+
 .login-container::before {
     content: "";
     position: absolute;
@@ -27,7 +27,7 @@
 .glass-card {
     position: relative;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    background: rgba(255, 255, 255, 0.85); 
     backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 40px;
